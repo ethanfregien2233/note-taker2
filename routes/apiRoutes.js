@@ -27,7 +27,7 @@ router.post('/notes', (req, res) => {
     let bigNote = {
         text: req.body.title,
         title: req.body.title,
-        id: Math.floor(Math.random())
+        id: Math.floor(Math.random() * 1234)
     }
     db.push(bigNote);
     fs.writeFileSync('./db/db.json', JSON.stringify(db));
